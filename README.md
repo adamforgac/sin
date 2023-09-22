@@ -1,2 +1,2 @@
-# sin
-School seminar
+# school seminar
+Learning about coding in school
