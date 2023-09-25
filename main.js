@@ -3,7 +3,7 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-// alert("Only for devices wider than 1100px");
+alert("Only for devices wider than 1100px");
 /******/ })()
 ;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFBLCtDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc2luLy4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGFsZXJ0KFwiT25seSBmb3IgZGV2aWNlcyB3aWRlciB0aGFuIDExMDBweFwiKTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFBQSxLQUFLLENBQUMsb0NBQW9DLENBQUMsQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Npbi8uL3NyYy9pbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJhbGVydChcIk9ubHkgZm9yIGRldmljZXMgd2lkZXIgdGhhbiAxMTAwcHhcIik7Il0sIm5hbWVzIjpbImFsZXJ0Il0sInNvdXJjZVJvb3QiOiIifQ==
