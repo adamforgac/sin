@@ -1,1 +1,1 @@
-console.log("start");
+alert("Only for devices wider than 1100px");

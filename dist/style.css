@@ -26,9 +26,10 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	background: url(images/alza-reklama.jpeg);
-	background-size: cover;
+	background: url(images/background-ad.jpeg);
+	background-position: 50% 50px;
 	background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 ol, ul {
@@ -62,9 +63,17 @@ table {
 /* GLOBAL */
 
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 :root {
 	--hamburger-grey: #858585;
-	--button-red: #950000;
+	--button-red: #cc2a20;
 	--button-grey: #c0c0c0;
 	--heading-blue: #00035b;
 }
@@ -74,12 +83,15 @@ table {
 /* WRAPPER */
 /* WRAPPER */
 
+
 .wrapper {
     min-height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-rows: 56px auto min-content;
+    grid-template-rows: auto min-content;
+	position: relative;
 }
+
 
 /* HEADER */
 /* HEADER */
@@ -109,6 +121,11 @@ table {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 31px 0 31px;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 56px;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 8px 30px -12px rgba(0,0,0,.12);
 }
 
 .company-icon {
@@ -152,8 +169,6 @@ table {
 }
 
 
-
-
 /* RIGHT PART */
 
 
@@ -179,7 +194,6 @@ table {
 }
 
 .right-part a {
-	text-decoration: none;
 	color: var(--button-red);
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.9rem;
@@ -191,11 +205,10 @@ table {
 /* MAIN */
 
 
-main {
+.content {
 	width: 1100px;
-	min-height: 100vh;
 	background-color: white;
-	margin: 200px auto 0 auto;
+	margin: 300px auto 0 auto;
 	box-shadow: inset 0 0 5px 2px rgba(0,0,0,.15);
 	padding: 20px 42px;
 }
@@ -226,7 +239,6 @@ hr {
 } 
 
 .top-panel nav ul li a {
-	text-decoration: none;
 	color: var(--button-red);
 	font-size: 0.9rem;
 }
@@ -251,14 +263,17 @@ hr {
 
 .main-buttons button {
 	height: 40px;
-	font-size: 0.8rem;
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 600;
 	border: none;
 	background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.main-buttons button a {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
 	color: white;
 }
 
@@ -278,10 +293,6 @@ hr {
 	background: url(images/button-image-four.png);
 }
 
-
-v
-
-
 .news {
 	margin-top: 35px;
 }
@@ -298,22 +309,15 @@ v
 	gap: 15px;
 }
 
-.main-report-text h3 {
+.main-report-text h2 a {
 	color: var(--heading-blue);
 	font-size: 2.125rem;
 	line-height: 2.5rem;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.main-report-text p {
-	font-size: 1rem;
-	line-height: 1.375rem;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 .main-report-text p a {
 	color: var(--button-red);
-	text-decoration: none;
 }
 
 .other-news {
@@ -342,7 +346,7 @@ v
 	gap: 15px;
 }
 
-.other-news-text h4 {
+.news-heading a {
 	font-size: 1.25rem;
 	line-height: 1.5rem;
 	color: var(--heading-blue);
@@ -352,9 +356,15 @@ v
 	color: var(--button-red);
 }
 
-.other-news-text p {
+.news-paragraph {
 	font-size: 1rem;
 	line-height: 1.375rem;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.news-paragraph-v2 {
+	font-size: 1rem;
+	line-height: 1.125rem;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -366,10 +376,282 @@ v
 
 .bonuses {
 	display: grid;
-	grid-template-rows: min-content auto;
+	grid-template-columns: 664px auto;
+	margin-top: 35px;
+	gap: 47px;
 }
 
 .bonus-item {
 	display: grid;
-	grid-template-columns: 350px auto;
+	grid-template-columns: 420px auto;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.news-border {
+	border: 1px solid var(--button-grey);
+}
+
+.person-comments-photo {
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+}
+
+.comments-text {
+	display: grid;
+	grid-template-rows: repeat(3, min-content);
+	gap: 15px;
+	max-width: 420px;
+}
+
+.comments-photo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-category {
+	color: var(--hamburger-grey);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.75rem;
+}
+
+.ads {
+	display: grid;
+	grid-template-rows: min-content min-content;
+	gap: 20px;
+}
+
+.sticky {
+  	position: sticky;
+  	top: 56px;
+}
+
+figcaption {
+	text-align: right;
+	font-size: 0.625rem;
+	text-transform: uppercase;
+	color: grey;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* HAPPENED */
+/* HAPPENED */
+/* HAPPENED */
+
+
+.happened {
+	display: grid;
+	grid-template-rows: min-content auto;
+	background-color: rgb(242, 240, 222);
+	margin-top: 30px;
+}
+
+main {
+	margin-bottom: 40px;
+}
+
+.happened-heading {
+	padding: 15px 16px;
+}
+
+.happened-heading h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	color: var(--hamburger-grey);
+}
+
+.happened-line-start {
+	border: 1px solid rgb(96, 96, 96);
+}
+
+.happened-line {
+	border: 1px solid #d0d0d0;
+}
+
+.happened-card {
+	display: grid;
+	grid-template-columns: min-content 325px auto;
+	padding: 16px;
+	gap: 10px;
+}
+
+.happened-card-ad {
+	display: grid;
+	grid-template-columns: 325px auto;
+	padding: 16px 16px 16px 70px;
+	gap: 10px;
+}
+
+.card-time {
+	transform: translateY(3px);
+}
+
+.card-time p {
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-content {
+	display: grid;
+	grid-template-rows: min-content min-content;
+	gap: 10px;
+}
+
+.happened-section-ad {
+	width: 240px;
+}
+
+.ad-banner {
+	background-color: #e9e7d5;
+	width: min-content;
+	padding: 5px 8px;
+	border-radius: 6px;
+	font-size: 0.75rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.show-more {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 71px;
+	padding: 1.5rem;
+}
+
+.show-more a {
+	font-size: 1.125rem;
+	color: var(--button-red);
+}
+
+.show-more a i {
+	color: var(--hamburger-grey);
+	margin-left: 5px;
+}
+
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+
+
+footer {
+	margin-top: 25px;
+}
+
+.footer-nav {
+	display: grid;
+	grid-template-rows: repeat(3, min-content);
+	gap: 30px;
+	padding-bottom: 24px;
+}
+
+.seznam-logo img {
+	width: 112px;
+}
+
+.theme-links {
+	display: grid;
+	grid-template-columns: repeat(6, auto);
+	justify-content: space-between;
+}
+
+.theme-links a, .theme-links h5, .other-links a, .other-links h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9rem;
+	white-space: nowrap;
+}
+
+.theme-links > ul {
+	display: grid;
+	grid-template-rows: repeat(6, min-content);
+	gap: 15px;
+}
+
+.theme-links > ul li:first-child {
+	color: black;
+}
+
+.theme-links li {
+	list-style-type: none;
+}
+
+.theme-links a {
+	color: var(--button-red);
+}
+
+.other-links {
+	display: grid;
+	grid-template-rows: repeat(3, min-content);
+	justify-items: center;
+	gap: 18px;
+	margin-top: 20px;
+}
+
+.other-links li {
+	list-style-type: none;
+	white-space: nowrap;
+}
+
+.other-links a {
+	color: var(--button-red);
+}
+
+.other-links > ul:first-child {
+	display: grid;
+	grid-template-columns: repeat(7, min-content);
+	gap: 10px;
+}
+
+.other-links > ul:nth-child(2) {
+	display: grid;
+	grid-template-columns: repeat(10, min-content);
+	gap: 10px;
+}
+
+.other-links > ul:last-child {
+	display: grid;
+	grid-template-columns: repeat(8, min-content);
+	gap: 10px;
+}
+
+.social-media-nav {
+	display: grid;
+	grid-template-rows: min-content min-content;
+	padding-top: 22px;
+	gap: 30px;
+}
+
+.social-media {
+	display: grid;
+	grid-template-columns: repeat(11, min-content);
+	gap: 7px;
+	white-space: nowrap;
+	justify-content: center;
+}
+
+.social-media a {
+	color: var(--button-red);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.vertical {
+	color: var(--button-grey);
+}
+
+.copyright-area {
+	display: grid;
+	grid-template-columns: repeat(3, min-content);
+	gap: 20px;
+	white-space: nowrap;
+	justify-content: center;
+}
+
+.copyright-area p {
+	color: grey;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	font-size: 0.875rem;
 }
